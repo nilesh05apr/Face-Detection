@@ -14,11 +14,8 @@ def detect(img):
 
 
 face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
-img_path = 'images/Image_1.jpg'
+img_path = 'images/<image_path>'
 img = cv.imread(img_path, 1)
 faces = detect(img)
-# cv.imshow('image',faces)
-# cv.waitKey(0)
-# cv.destroyAllWindows()
 output_path = 'output/'
 cv.imwrite(output_path + 'sample output.jpg', faces)
